@@ -1,0 +1,49 @@
+ontology: ZyraSpace
+version: 0.1.0
+entities:
+  Mission:
+    properties: [id, name, objective, status, regulatory_context, risk_class]
+  Vehicle:
+    properties: [id, name, vehicle_type, lifecycle_state, configuration_baseline]
+  Subsystem:
+    properties: [id, name, discipline, owner, maturity_level]
+  Requirement:
+    properties: [id, text, rationale, verification_method, status]
+  Interface:
+    properties: [id, source_system, target_system, interface_type, control_document]
+  Hazard:
+    properties: [id, description, severity, likelihood, mitigation, status]
+  TestCase:
+    properties: [id, objective, method, configuration, acceptance_criteria]
+  TestResult:
+    properties: [id, test_case_id, timestamp, outcome, evidence_uri]
+  EvidenceRecord:
+    properties: [id, source_uri, source_type, authority, retrieved_at, checksum]
+  NASAReference:
+    properties: [id, title, url, domain, publication_date, tags]
+  Facility:
+    properties: [id, name, facility_type, jurisdiction, certification_status]
+  MaritimePlatform:
+    properties: [id, name, class, role, flag_state, class_society]
+  AgricultureModule:
+    properties: [id, crop_system, water_loop, nutrient_loop, lighting, atmosphere_control]
+  AgentJob:
+    properties: [id, query, source_scope, status, evidence_count]
+relationships:
+  - Mission USES Vehicle
+  - Vehicle HAS Subsystem
+  - Subsystem SATISFIES Requirement
+  - Subsystem CONNECTS_VIA Interface
+  - Requirement VERIFIED_BY TestCase
+  - TestCase PRODUCES TestResult
+  - TestResult SUPPORTED_BY EvidenceRecord
+  - EvidenceRecord DERIVED_FROM NASAReference
+  - Mission OPERATES_AT Facility
+  - Mission MAY_USE MaritimePlatform
+  - Facility MAY_HOST AgricultureModule
+  - AgentJob PRODUCES EvidenceRecord
+governance:
+  evidence_required: true
+  source_provenance_required: true
+  human_approval_for_baseline_change: true
+  safety_review_required: true
