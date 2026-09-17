@@ -1,0 +1,33 @@
+sources:
+  - title: NASA Systems Engineering Handbook
+    url: https://www.nasa.gov/reference/systems-engineering-handbook/
+    domain: systems_engineering
+    priority: foundational
+  - title: NASA System Design Processes
+    url: https://www.nasa.gov/reference/4-0-system-design-processes/
+    domain: system_design
+    priority: foundational
+  - title: NASA Product Realization
+    url: https://www.nasa.gov/reference/5-0-product-realization/
+    domain: verification_validation
+    priority: foundational
+  - title: NASA SLS Avionics
+    url: https://www.nasa.gov/reference/sls-avionics/
+    domain: avionics
+    priority: reference
+  - title: NASA Marshall Space Launch System
+    url: https://www.nasa.gov/reference/marshalls-space-launch-system/
+    domain: launch_systems
+    priority: reference
+  - title: NASA Sustainable Aviation
+    url: https://www.nasa.gov/directorates/armd/sustainable-aviation/
+    domain: sustainable_aviation
+    priority: reference
+  - title: NASA Electrified Aircraft Propulsion
+    url: https://www.nasa.gov/mission/eap/
+    domain: electrified_propulsion
+    priority: reference
+  - title: NASA Aviation Beyond 2040
+    url: https://www.nasa.gov/centers-and-facilities/ames/aviation-beyond-2040/
+    domain: future_aviation
+    priority: horizon_scan
